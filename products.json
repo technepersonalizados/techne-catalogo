@@ -1,0 +1,30 @@
+[
+  {
+    "id": "fe-01",
+    "title": "Ele Está no Barco",
+    "theme": "Fé",
+    "image": "assets/products/fe.jpg",
+    "description": "Arte de fé e inspiração."
+  },
+  {
+    "id": "tecnologia-01",
+    "title": "Caneca Tech",
+    "theme": "Profissões",
+    "image": "assets/products/tecnologia.png",
+    "description": "Arte para profissionais e apaixonados por tecnologia."
+  },
+  {
+    "id": "bebe-01",
+    "title": "Dinda do Felipe",
+    "theme": "Bebê & Família",
+    "image": "assets/products/bebe.jpg",
+    "description": "Arte personalizada para momentos especiais."
+  },
+  {
+    "id": "divertidas-01",
+    "title": "Frases Divertidas",
+    "theme": "Frases & Humor",
+    "image": "assets/products/divertidas.jpg",
+    "description": "Canecas com humor e personalidade."
+  }
+]

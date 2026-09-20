@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e88aae">
+<title>Canecas Personalizadas</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="logo-card"><img id="logo" src="assets/logo.png" alt="Logo da loja"></div>
+  <h1 id="store-name">Canecas Personalizadas</h1>
+  <p id="subtitle">Escolha um tema e encontre sua arte favorita.</p>
+</header>
+<main class="container">
+  <div class="section-head"><div><span class="eyebrow">CATÁLOGO</span><h2>Escolha sua arte</h2></div></div>
+  <nav id="filters" class="filters"></nav>
+  <section id="catalog" class="grid"></section>
+  <div id="empty" class="empty" hidden>Nenhuma caneca encontrada nesse tema.</div>
+</main>
+<div id="modal" class="modal" hidden>
+  <div class="modal-card">
+    <button class="close" aria-label="Fechar">×</button>
+    <img id="modal-img" alt="">
+    <div class="modal-info"><span id="modal-theme" class="pill"></span><h2 id="modal-title"></h2><p id="modal-description"></p><a id="modal-contact" class="button" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+  </div>
+</div>
+<footer><span id="year"></span> · Canecas Personalizadas</footer>
+<script src="app.js"></script>
+</body></html>

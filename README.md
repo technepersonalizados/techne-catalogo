@@ -1,47 +1,66 @@
-# Catálogo de Canecas — GitHub Pages + painel pelo celular
+# Techne — Catálogo de Canecas
 
-## O que você recebeu
+Catálogo completo com carrinho, preços por quantidade, escolha de vendedor no WhatsApp e painel de administração.
 
-- `index.html`: catálogo público.
-- `admin.html`: painel para celular.
-- `products.json`: produtos.
-- `config.json`: nome, texto e WhatsApp.
-- `assets/logo.png`: logo enviado.
-- `assets/products/`: fotos enviadas.
+## O que está incluído
 
-## Publicação no GitHub
+- `index.html` — catálogo público com carrinho
+- `admin.html` — painel para gerenciar produtos, configurações e logo
+- `products.json` — lista de produtos
+- `config.json` — nome, textos, WhatsApps dos vendedores e cores
+- `assets/logo.png` — logo da Techne
+- `assets/products/` — fotos dos produtos
 
-1. Crie um repositório, por exemplo `catalogo-canecas`.
-2. Envie TODOS os arquivos e pastas deste projeto para a branch `main`.
-3. No GitHub, abra **Settings → Pages**.
-4. Selecione **Deploy from a branch**, branch `main` e pasta `/ (root)`.
-5. Abra o endereço do GitHub Pages.
+## Preços automáticos (por quantidade total no carrinho)
 
-## Configurar o painel pelo celular
+| Quantidade     | Preço unitário |
+|----------------|----------------|
+| 1 caneca       | R$ 35,00       |
+| 2 a 6 canecas  | R$ 32,00       |
+| 7 a 10 canecas | R$ 30,00       |
+| 11 ou mais     | R$ 28,00       |
 
-O painel (`/admin.html`) usa a API oficial do GitHub para atualizar `products.json`, `config.json` e enviar fotos.
+O valor unitário desce conforme a quantidade total de itens no carrinho.
 
-Na primeira entrada:
-1. Informe o usuário/organização do GitHub.
-2. Informe o nome exato do repositório.
-3. Informe um **Fine-grained Personal Access Token** com permissão de escrita no conteúdo desse repositório.
-4. Clique em Conectar.
+## Publicação no GitHub Pages
 
-O token fica salvo apenas no armazenamento local do navegador. **Não publique o token em nenhum arquivo do site e não o envie para ninguém.** Se perder o celular ou quiser revogar o acesso, revogue o token no GitHub.
+1. Crie um repositório (ex.: `catalogo-canecas`).
+2. Envie **todos** os arquivos e pastas deste projeto para a branch `main`.
+3. No GitHub: **Settings → Pages**.
+4. Selecione **Deploy from a branch**, branch `main`, pasta `/ (root)`.
+5. Abra o endereço gerado pelo GitHub Pages.
 
-## Importante
+## Configurar o painel (admin.html)
 
-O GitHub Pages é hospedagem estática. O painel consegue gerenciar o catálogo porque ele grava os arquivos diretamente no repositório via API. Depois de publicar uma alteração, o GitHub Pages pode levar alguns instantes para refletir a mudança.
+1. Abra `/admin.html` no navegador.
+2. Informe usuário/organização, nome do repositório e um **Fine-grained Personal Access Token** com permissão de escrita no conteúdo.
+3. Clique em **Conectar**.
 
-As fotos enviadas pelo painel são comprimidas no navegador e salvas como JPG para reduzir o tamanho do repositório.
+O token fica salvo apenas no armazenamento local do navegador. Não publique o token em nenhum arquivo.
+
+### O que você pode fazer no painel
+
+- Adicionar, editar e excluir produtos (com foto)
+- Alterar nome da loja, subtítulo e cores
+- Configurar **dois números de WhatsApp** (Vendedor 1 e Vendedor 2)
+- **Atualizar a logo** da loja (seção 4)
 
 ## WhatsApp
 
-No painel, use o formato internacional, somente números, por exemplo:
+No painel, use o formato internacional somente com números, exemplo:
+
 `5511999999999`
 
-Troque o número de exemplo antes de divulgar o catálogo.
+Configure os dois vendedores. No catálogo o cliente escolhe com qual vendedor deseja falar antes de enviar o pedido.
+
+## Carrinho
+
+- O cliente adiciona canecas pelo modal do produto (com controle de quantidade).
+- O botão flutuante mostra a quantidade total.
+- No carrinho é possível aumentar/diminuir quantidades.
+- O preço unitário é recalculado automaticamente conforme a tabela de descontos.
+- Ao enviar, o cliente escolhe Vendedor 1 ou Vendedor 2.
 
 ## Segurança
 
-Não coloque token de GitHub no `config.js`, `app.js`, `admin.js` ou em qualquer arquivo público. O token deve ser digitado somente no painel e armazenado localmente no aparelho do administrador.
+Nunca coloque o token do GitHub em arquivos públicos. Use apenas o painel e o armazenamento local do navegador.

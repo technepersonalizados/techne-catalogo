@@ -1,29 +1,89 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#e88aae">
-<title>Canecas Personalizadas</title><link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#FB675B">
+<title>Techne · Canecas Personalizadas</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="hero">
-  <div class="logo-card"><img id="logo" src="assets/logo.png" alt="Logo da loja"></div>
-  <h1 id="store-name">Canecas Personalizadas</h1>
-  <p id="subtitle">Escolha um tema e encontre sua arte favorita.</p>
+  <div class="logo-card"><img id="logo" src="assets/logo.png" alt="Logo Techne"></div>
+  <h1 id="store-name">Techne</h1>
+  <p id="subtitle">Canecas personalizadas com carinho e criatividade.</p>
 </header>
+
 <main class="container">
-  <div class="section-head"><div><span class="eyebrow">CATÁLOGO</span><h2>Escolha sua arte</h2></div></div>
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">CATÁLOGO</span>
+      <h2>Escolha sua arte</h2>
+    </div>
+  </div>
   <nav id="filters" class="filters"></nav>
   <section id="catalog" class="grid"></section>
   <div id="empty" class="empty" hidden>Nenhuma caneca encontrada nesse tema.</div>
 </main>
+
+<!-- Botão flutuante do carrinho -->
+<button id="cart-fab" class="cart-fab" aria-label="Abrir carrinho">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+  </svg>
+  <span id="cart-count" class="cart-count" hidden>0</span>
+</button>
+
+<!-- Modal do produto -->
 <div id="modal" class="modal" hidden>
   <div class="modal-card">
     <button class="close" aria-label="Fechar">×</button>
     <img id="modal-img" alt="">
-    <div class="modal-info"><span id="modal-theme" class="pill"></span><h2 id="modal-title"></h2><p id="modal-description"></p><a id="modal-contact" class="button" target="_blank" rel="noopener">Pedir pelo WhatsApp</a></div>
+    <div class="modal-info">
+      <span id="modal-theme" class="pill"></span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <p class="price-hint">A partir de R$ 28,00 · preço cai conforme a quantidade</p>
+      <div class="qty-row">
+        <button type="button" class="qty-btn" id="modal-minus">−</button>
+        <span id="modal-qty">1</span>
+        <button type="button" class="qty-btn" id="modal-plus">+</button>
+      </div>
+      <button type="button" class="button add-btn" id="modal-add">Adicionar ao carrinho</button>
+    </div>
   </div>
 </div>
-<footer><span id="year"></span> · Canecas Personalizadas</footer>
+
+<!-- Modal do carrinho -->
+<div id="cart-modal" class="modal" hidden>
+  <div class="modal-card cart-card">
+    <button class="close" id="cart-close" aria-label="Fechar">×</button>
+    <div class="cart-header">
+      <h2>Seu carrinho</h2>
+      <p id="cart-tiers">1 un = R$35 · 2–6 = R$32 · 7–10 = R$30 · 11+ = R$28</p>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div id="cart-empty" class="cart-empty" hidden>Seu carrinho está vazio.</div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total-value">R$ 0,00</strong>
+      </div>
+      <p class="unit-price" id="unit-price-info"></p>
+      <div class="seller-choice">
+        <span>Escolha o vendedor:</span>
+        <div class="seller-btns">
+          <button type="button" class="seller-btn active" data-seller="1" id="seller1-btn">Vendedor 1</button>
+          <button type="button" class="seller-btn" data-seller="2" id="seller2-btn">Vendedor 2</button>
+        </div>
+      </div>
+      <button type="button" class="button whatsapp-btn" id="send-whatsapp" disabled>Enviar pedido pelo WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<footer><span id="year"></span> · Techne · Canecas Personalizadas</footer>
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>

@@ -33,12 +33,5 @@
     "theme": "Bebê & Família",
     "image": "assets/products/bebe.jpg",
     "description": "Arte personalizada para momentos especiais."
-  },
-  {
-    "id": "divertidas-01",
-    "title": "Frases Divertidas",
-    "theme": "Frases & Humor",
-    "image": "assets/products/divertidas.jpg",
-    "description": "Canecas com humor e personalidade."
   }
 ]
